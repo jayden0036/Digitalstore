@@ -1,4 +1,10 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Formation — Crée ton site, vends en ligne et fais travailler l'IA pour toi | DigitalStore</title><meta name="description" content="8 modules complets pour créer ton site, vendre en ligne et automatiser avec l'IA. 49 USD, accès à vie."><style>
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Formation — Crée ton site, vends en ligne et fais travailler l'IA pour toi | DigitalStore</title><meta name="description" content="8 modules complets pour créer ton site, vendre en ligne et automatiser avec l'IA. 49 USD, accès à vie.">
+<script src="https://cdn.paddle.com/paddle/v1/paddle.js"></script>
+<script>
+Paddle.Environment.set("sandbox");
+Paddle.Initialize({ token: "test_f4057aa13669d71aea2d2d08877" });
+</script>
+<style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Segoe UI",Arial,sans-serif;background:#fff;color:#1a2340;line-height:1.6}
 .c{max-width:820px;margin:0 auto;padding:0 20px}
@@ -14,6 +20,7 @@ h1 span{color:#2563eb}
 .lead{font-size:1.05rem;color:#56617a;max-width:600px;margin:0 auto 28px}
 .buy{display:inline-block;background:#14255c;color:#fff;padding:14px 34px;border-radius:10px;font-weight:700;font-size:1.05rem;cursor:pointer;border:none}
 .buy:hover{background:#1d347f}
+.buy:disabled{background:#8fa3cc;cursor:wait}
 section{padding:50px 0}
 h2{font-size:1.5rem;font-weight:800;color:#14255c;margin-bottom:24px;text-align:center}
 ul{list-style:none;max-width:600px;margin:0 auto}
@@ -29,7 +36,7 @@ footer{background:#0d1633;color:#aab8d8;padding:30px 0;text-align:center;font-si
 <div class="badge">🚀 Nouveau — Formation complète</div>
 <h1>Crée ton site, <span>vends en ligne</span> et fais travailler l'IA pour toi</h1>
 <p class="lead">8 modules complets avec des prompts IA à copier-coller, des exercices, des quiz et un plan de lancement en 30 jours. Accès à vie.</p>
-<button class="buy" onclick="acheterFormation()">Acheter maintenant — $49.00</button>
+<button class="buy" id="btn-acheter" onclick="acheterFormation()" disabled>⏳ Chargement du paiement…</button>
 </div></div>
 <section class="c">
 <h2>📦 Ce que tu vas apprendre</h2>
@@ -43,17 +50,25 @@ footer{background:#0d1633;color:#aab8d8;padding:30px 0;text-align:center;font-si
 </ul>
 <div class="price-box">
 <div class="price">$49.00 <small>— paiement unique, accès à vie</small></div>
-<button class="buy" style="margin-top:18px" onclick="acheterFormation()">Acheter maintenant</button>
+<button class="buy" style="margin-top:18px" id="btn-acheter-2" onclick="acheterFormation()" disabled>⏳ Chargement du paiement…</button>
 </div>
 </section>
 <footer><div class="c">© 2026 DigitalStore — Fait avec ❤️ pour Jayden.</div></footer>
-<script src="https://cdn.paddle.com/paddle/v1/paddle.js"></script>
 <script>
-Paddle.Environment.set("sandbox");
-Paddle.Initialize({ token: "test_f4057aa13669d71aea2d2d08877" });
+function activerBoutons() {
+  var b1 = document.getElementById("btn-acheter");
+  var b2 = document.getElementById("btn-acheter-2");
+  if (typeof Paddle !== "undefined") {
+    b1.disabled = false; b1.textContent = "Acheter maintenant — $49.00";
+    b2.disabled = false; b2.textContent = "Acheter maintenant";
+  }
+}
 function acheterFormation() {
   if (typeof Paddle === "undefined") { alert("Le paiement n'a pas fini de charger, réessaie dans quelques secondes."); return; }
   Paddle.Checkout.open({ items: [{ priceId: "pri_01m4tt5n9hgc6nxsmhgpn9w7q5", quantity: 1 }] });
 }
+if (typeof Paddle !== "undefined") { activerBoutons(); } 
+setTimeout(activerBoutons, 3000);
+setTimeout(activerBoutons, 8000);
 </script>
 </body></html>
