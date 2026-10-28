@@ -1,281 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DigitalStore — Mode, marques & produits digitaux</title>
-  <meta name="description" content="Découvrez l'univers DigitalStore : des marques de vêtements, dont DONA JACQUES, et une sélection de produits digitaux, formations et ressources professionnelles.">
-  <meta name="theme-color" content="#111827">
-  <style>
-    :root{
-      --ink:#111827;--muted:#667085;--line:#e7e9ee;--paper:#f7f8fa;
-      --blue:#315cf5;--blue-dark:#2146d0;--gold:#d8b56d;--dark:#101114;
-      --radius:22px;--shadow:0 18px 50px rgba(17,24,39,.09);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
-    .announcement{background:var(--ink);color:#f9fafb;text-align:center;font-size:.78rem;letter-spacing:.04em;padding:9px 16px}
-    .announcement span{color:#b8c7ff}
-    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(231,233,238,.9)}
-    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-size:1.38rem;font-weight:850;letter-spacing:-.06em;white-space:nowrap}
-    .brand span{color:var(--blue)}
-    .nav-links{display:flex;align-items:center;gap:28px;font-size:.9rem;font-weight:650;color:#424b5b}
-    .nav-links a:hover{color:var(--blue)}
-    .nav-cta{background:var(--ink);color:#fff;padding:11px 17px;border-radius:999px;font-size:.86rem;font-weight:700;white-space:nowrap;transition:.2s}
-    .nav-cta:hover{background:var(--blue)}
-    .hero{padding:76px 0 48px;background:radial-gradient(ellipse at 80% 0%,#edf1ff 0,transparent 40%),linear-gradient(180deg,#fbfcff 0%,#fff 100%)}
-    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:800;color:var(--blue);margin-bottom:18px}
-    .eyebrow:before{content:"";width:25px;height:2px;background:var(--blue)}
-    h1{font-size:clamp(2.6rem,6vw,5.1rem);line-height:1.02;letter-spacing:-.065em;max-width:850px;font-weight:850}
-    h1 .accent{color:var(--blue)}
-    .hero-copy{max-width:620px;color:var(--muted);font-size:1.08rem;margin-top:22px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:999px;font-weight:750;font-size:.9rem;border:1px solid transparent;transition:transform .2s,background .2s}
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:var(--blue-dark)}
-    .btn-outline{border-color:#d9dde6;background:#fff;color:var(--ink)}
-    .hero-note{margin-top:30px;color:#778093;font-size:.8rem;display:flex;gap:18px;flex-wrap:wrap}
-    .hero-note span{display:inline-flex;align-items:center;gap:7px}
-    .hero-note span:before{content:"✓";color:var(--blue);font-weight:900}
-    .section{padding:68px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}
-    .kicker{color:var(--blue);font-size:.72rem;font-weight:850;text-transform:uppercase;letter-spacing:.15em;margin-bottom:8px}
-    h2{font-size:clamp(1.8rem,3.5vw,2.65rem);line-height:1.12;letter-spacing:-.045em;font-weight:830}
-    .section-intro{color:var(--muted);max-width:470px;font-size:.95rem}
-    .universe-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .universe{position:relative;min-height:340px;border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;isolation:isolate;transition:transform .25s,box-shadow .25s}
-    .universe:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-    .digital{background:linear-gradient(135deg,#f0f4ff,#e6ecff);border:1px solid #dce4ff}
-    .fashion{background:var(--dark);color:#fff;border:1px solid #24252a}
-    .universe-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .pill{display:inline-flex;padding:6px 11px;border-radius:999px;font-size:.7rem;font-weight:800;letter-spacing:.04em;background:rgba(255,255,255,.72);color:#34415c}
-    .fashion .pill{background:#25262b;color:#e9d6ad}
-    .universe-symbol{font-size:1.2rem;width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:rgba(255,255,255,.75);color:var(--blue)}
-    .fashion .universe-symbol{background:#25262b;color:var(--gold)}
-    .universe h3{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.05em;margin:26px 0 12px}
-    .fashion h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:.015em;color:var(--gold)}
-    .universe p{max-width:420px;color:#5e687b;font-size:.94rem}
-    .fashion p{color:#c5c6cc}
-    .universe-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:28px}
-    .text-link{font-weight:800;font-size:.9rem;display:inline-flex;align-items:center;gap:10px}
-    .text-link .arrow{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-size:1.1rem;transition:transform .2s}
-    .universe:hover .arrow{transform:translateX(3px)}
-    .fashion .text-link{color:#fff}.fashion .text-link .arrow{background:var(--gold);color:#151515}
-    .mini-label{font-size:.76rem;color:#778093;font-weight:650}
-    .fashion .mini-label{color:#a7a8ae}
-    .catalog{background:var(--paper)}
-    .catalog-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
-    .catalog-top p{color:var(--muted);max-width:460px;font-size:.94rem}
-    .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .product{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-    .product:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(17,24,39,.07)}
-    .product-art{min-height:154px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#182447,#355ff5);color:#fff}
-    .product-art:after{content:"";position:absolute;width:125px;height:125px;border:1px solid rgba(255,255,255,.2);border-radius:50%;right:-28px;top:-38px}
-    .product-art .emoji{font-size:2.7rem;filter:drop-shadow(0 8px 12px rgba(0,0,0,.18))}
-    .product-art .art-label{position:absolute;bottom:13px;left:17px;font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:#dbe4ff;font-weight:800}
-    .art-ebook{background:linear-gradient(135deg,#183e39,#32937e)}
-    .art-notion{background:linear-gradient(135deg,#25272d,#626975)}
-    .art-video{background:linear-gradient(135deg,#522c85,#a45ee7)}
-    .art-icons{background:linear-gradient(135deg,#8a3c24,#f29b53)}
-    .art-photo{background:linear-gradient(135deg,#214c78,#66b5cf)}
-    .art-copy{background:linear-gradient(135deg,#7e273c,#e35b78)}
-    .product-body{padding:21px;display:flex;flex-direction:column;flex:1}
-    .product-type{font-size:.69rem;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:850;margin-bottom:8px}
-    .product h3{font-size:1.05rem;line-height:1.35;letter-spacing:-.02em;margin-bottom:9px}
-    .product p{color:var(--muted);font-size:.85rem;flex:1}
-    .product-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid #eff0f3}
-    .price{font-size:1.18rem;font-weight:850;letter-spacing:-.03em}
-    .small-link{font-size:.8rem;font-weight:800;color:var(--blue)}
-    .bundle{margin-top:25px;border-radius:20px;padding:28px 30px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:22px}
-    .bundle h3{font-size:1.35rem;letter-spacing:-.03em;margin-bottom:5px}
-    .bundle p{color:#c2c9d7;font-size:.88rem}
-    .bundle-price{white-space:nowrap;font-size:1.55rem;font-weight:850}
-    .bundle-price del{font-size:.88rem;color:#a4acbb;margin-right:8px;font-weight:500}
-    .bundle .btn{background:#fff;color:var(--ink);white-space:nowrap}
-    .promise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:30px}
-    .promise{padding:20px 0;border-top:1px solid var(--line)}
-    .promise-icon{font-size:1.3rem;margin-bottom:12px}
-    .promise h4{font-size:.92rem;margin-bottom:5px}
-    .promise p{font-size:.8rem;color:var(--muted)}
-    .brand-spotlight{padding:0 0 70px}
-    .spotlight{background:#111214;border-radius:var(--radius);padding:38px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff;overflow:hidden}
-    .spotlight .kicker{color:var(--gold)}
-    .spotlight h2{font-family:Georgia,"Times New Roman",serif;color:var(--gold);letter-spacing:.04em}
-    .spotlight p{color:#c7c7cb;max-width:580px;margin-top:12px;font-size:.92rem}
-    .spotlight .btn{background:var(--gold);color:#141414;white-space:nowrap}
-    footer{background:#0c0e12;color:#c2c6ce;padding:44px 0 24px}
-    .footer-main{display:flex;justify-content:space-between;gap:35px;flex-wrap:wrap}
-    .footer-brand{max-width:330px}
-    .footer-brand .brand{color:#fff;display:inline-block;margin-bottom:12px}
-    .footer-brand p{font-size:.84rem;color:#969da9}
-    .footer-col h4{color:#fff;font-size:.85rem;margin-bottom:13px}
-    .footer-col a,.footer-col p{display:block;font-size:.82rem;color:#aeb4bf;margin-bottom:8px}
-    .footer-col a:hover{color:#fff}
-    .copyright{border-top:1px solid #272a31;margin-top:32px;padding-top:18px;font-size:.75rem;color:#858c98;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    @media(max-width:850px){
-      .nav-links{gap:15px}.nav-links a:nth-child(2){display:none}
-      .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .promise-grid{grid-template-columns:repeat(2,1fr)}
-      .spotlight{align-items:flex-start;flex-direction:column}
-    }
-    @media(max-width:600px){
-      .container{width:min(100% - 28px,1160px)}
-      .announcement{font-size:.69rem}
-      .nav{min-height:68px;gap:12px}.brand{font-size:1.2rem}
-      .nav-links{display:none}.nav-cta{padding:10px 13px;font-size:.78rem}
-      .hero{padding:55px 0 34px}h1{font-size:clamp(2.5rem,12vw,3.6rem)}
-      .hero-copy{font-size:.98rem}.hero-note{gap:9px 14px}
-      .section{padding:48px 0}.section-head,.catalog-top{align-items:flex-start;flex-direction:column}
-      .universe-grid{grid-template-columns:1fr}.universe{min-height:300px;padding:24px}
-      .product-grid{grid-template-columns:1fr 1fr;gap:12px}
-      .product-art{min-height:118px}.product-art .emoji{font-size:2.2rem}
-      .product-body{padding:14px}.product h3{font-size:.94rem}.product p{font-size:.79rem}
-      .product-foot{align-items:flex-start;flex-direction:column;gap:5px;margin-top:14px}
-      .price{font-size:1.1rem}
-      .bundle{padding:24px;align-items:flex-start;flex-direction:column}
-      .bundle-price{font-size:1.4rem}
-      .promise-grid{gap:10px}.promise{padding:16px 0}
-      .spotlight{padding:26px}
-      .footer-main{gap:25px}.copyright{flex-direction:column}
-    }
-    @media(max-width:380px){.product-grid{grid-template-columns:1fr}.product-art{min-height:140px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="DONA JACQUES — streetwear, luxe et style de vie. Découvrez les collections D&J à Kinshasa.">
+<title>DONA JACQUES — Streetwear • Luxe • Kinshasa</title>
+<style>
+:root{--black:#080909;--panel:#111313;--gold:#e8bd59;--cream:#f3eee4;--muted:#bcb8ad}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1240px,94%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(8,9,9,.96);border-bottom:1px solid #5b4926;backdrop-filter:blur(12px)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Georgia,serif;font-size:1.25rem;letter-spacing:.12em;color:var(--gold);font-weight:bold}.brand small{display:block;font:9px Arial;letter-spacing:.28em;color:var(--cream);margin-top:4px}
+nav{display:flex;gap:22px;align-items:center;font-size:.9rem;color:#ddd}nav a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--gold);color:var(--gold);border-radius:3px;font-weight:bold;transition:.2s}.btn:hover{background:var(--gold);color:#111}
+.hero{padding:22px 0 0}.hero img{width:100%;display:block;border:1px solid #342b1b;border-radius:5px}.intro{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:36px 0}.eyebrow{color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-size:.75rem}.intro h1{font:clamp(2rem,4.5vw,4.1rem)/1.03 Georgia,serif;margin:10px 0 14px}.intro p{line-height:1.75;color:#c9c5bc;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.section{padding:30px 0 42px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}.section h2{font:clamp(1.7rem,3vw,2.5rem) Georgia,serif;margin:6px 0;color:var(--cream)}.section-head p{margin:0;color:var(--muted);font-size:.92rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.collection{background:var(--panel);border:1px solid #35302a;border-radius:5px;overflow:hidden}.collection img{width:100%;height:auto;display:block;transition:transform .35s}.collection:hover img{transform:scale(1.015)}.collection-info{padding:18px;display:flex;justify-content:space-between;gap:15px;align-items:center}.collection-info h3{margin:0 0 6px;font-size:1.1rem}.collection-info p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}.collection-info .btn{white-space:nowrap;padding:10px 13px;font-size:.83rem}
+.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#4d3e24;border:1px solid #4d3e24;margin:15px 0 45px}.promise div{background:#101111;padding:22px 18px}.promise strong{display:block;color:var(--gold);margin-bottom:8px}.promise span{font-size:.88rem;line-height:1.55;color:#c6c2b9}
+footer{border-top:1px solid #4d3e24;padding:25px 0;color:#aaa;font-size:.85rem}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.gold{color:var(--gold)}
+@media(max-width:760px){.nav{padding:14px 0;align-items:flex-start;flex-wrap:wrap}.nav nav{order:3;width:100%;overflow:auto;padding-bottom:4px;gap:18px}.nav .btn{padding:9px 12px}.intro{grid-template-columns:1fr;padding:25px 0}.grid{grid-template-columns:1fr}.collection-info{align-items:flex-start;flex-direction:column}.promise{grid-template-columns:repeat(2,1fr)}.section-head{align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.promise{grid-template-columns:1fr}.brand{font-size:1.05rem}}
+</style>
 </head>
 <body>
-  <div class="announcement">L’univers DigitalStore · <span>Créativité, style et solutions digitales</span></div>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="DigitalStore accueil">Digital<span>Store</span></a>
-      <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#univers">Nos univers</a>
-        <a href="#produits">Produits digitaux</a>
-        <a href="#marque">DONA JACQUES</a>
-      </nav>
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end"><a class="nav-cta" href="#univers">Explorer la boutique <span aria-hidden="true">↗</span></a><a class="nav-cta" style="background:#c13584" href="https://ig.me/m/masterweb75" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="eyebrow">Bienvenue chez DigitalStore</div>
-        <h1>Le style qui vous représente.<br><span class="accent">Les outils qui vous font avancer.</span></h1>
-        <p class="hero-copy">Explorez un espace pensé pour vos envies et vos ambitions : des marques de vêtements à découvrir et des produits digitaux pour apprendre, créer et développer vos projets.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#univers">Découvrir nos univers <span aria-hidden="true">→</span></a>
-          <a class="btn btn-outline" href="#produits">Voir les produits digitaux</a>
-          <a class="btn btn-outline" href="https://ig.me/m/masterweb75" target="_blank" rel="noopener noreferrer">Nous écrire sur Instagram ↗</a>
-        </div>
-        <div class="hero-note">
-          <span>Mode & identité</span><span>Formations & ressources</span><span>Depuis la RDC 🇨🇩</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="univers">
-      <div class="container">
-        <div class="section-head">
-          <div><div class="kicker">Un seul espace, deux univers</div><h2>Qu’êtes-vous venu découvrir ?</h2></div>
-          <p class="section-intro">Choisissez directement votre univers. Chaque espace est conçu pour vous aider à trouver facilement ce que vous recherchez.</p>
-        </div>
-        <div class="universe-grid">
-          <a class="universe digital" href="#produits">
-            <div class="universe-top"><span class="pill">APPRENDRE · CRÉER · ÉVOLUER</span><span class="universe-symbol" aria-hidden="true">✦</span></div>
-            <div>
-              <h3>Produits digitaux</h3>
-              <p>Formations, ebooks, templates et ressources pratiques pour vos projets, votre créativité et votre activité en ligne.</p>
-            </div>
-            <div class="universe-bottom"><span class="text-link">Explorer le catalogue <span class="arrow" aria-hidden="true">→</span></span><span class="mini-label">Ressources numériques</span></div>
-          </a>
-          <a class="universe fashion" href="dona-jacques.html">
-            <div class="universe-top"><span class="pill">STYLE · CONFIANCE · IDENTITÉ</span><span class="universe-symbol" aria-hidden="true">✳</span></div>
-            <div>
-              <h3>DONA JACQUES</h3>
-              <p>Une vision streetwear née à Kinshasa. Découvrez une marque qui associe expression personnelle, jeunesse et évolution.</p>
-            </div>
-            <div class="universe-bottom"><span class="text-link">Découvrir la marque <span class="arrow" aria-hidden="true">→</span></span><span class="mini-label">Mode & streetwear</span></div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section catalog" id="produits">
-      <div class="container">
-        <div class="catalog-top">
-          <div><div class="kicker">Le catalogue</div><h2>Des ressources pour aller plus loin.</h2></div>
-          <p>Parcourez notre sélection de produits numériques. Ouvrez la fiche ou utilisez le lien de commande indiqué pour chaque produit.</p>
-        </div>
-        <div class="product-grid">
-          <article class="product">
-            <div class="product-art"><span class="emoji" aria-hidden="true">🚀</span><span class="art-label">Formation en ligne</span></div>
-            <div class="product-body"><div class="product-type">Business · IA · Web</div><h3>Crée ton site, vends en ligne et fais travailler l’IA pour toi</h3><p>8 modules : offre, site, vente en ligne et IA. Avec prompts, exercices, quiz et plan de lancement sur 30 jours.</p><div class="product-foot"><span class="price">$49.00</span><a class="small-link" href="formation.html">Découvrir →</a></div></div>
-          </article>
-          <article class="product">
-            <div class="product-art art-ebook"><span class="emoji" aria-hidden="true">📘</span><span class="art-label">Guide numérique</span></div>
-            <div class="product-body"><div class="product-type">SEO · Visibilité</div><h3>Ebook SEO Révolution</h3><p>Un guide pratique sur les mots-clés, le SEO, le netlinking, le GEO et un plan d’action sur 90 jours.</p><div class="product-foot"><span class="price">$19.99</span><a class="small-link" href="https://ig.me/m/masterweb75" target="_blank" rel="noopener noreferrer">Commander →</a></div></div>
-          </article>
-          <article class="product">
-            <div class="product-art art-notion"><span class="emoji" aria-hidden="true">🗂️</span><span class="art-label">Organisation</span></div>
-            <div class="product-body"><div class="product-type">Productivité</div><h3>Pack Templates Notion</h3><p>12 modèles pour organiser vos projets, vos finances et votre calendrier de contenu.</p><div class="product-foot"><span class="price">$14.99</span><span class="small-link">Bientôt disponible</span></div></div>
-          </article>
-          <article class="product">
-            <div class="product-art art-video"><span class="emoji" aria-hidden="true">🎬</span><span class="art-label">Création vidéo</span></div>
-            <div class="product-body"><div class="product-type">Vidéo · Réseaux sociaux</div><h3>Formation Montage Vidéo</h3><p>Apprenez les bases de CapCut, la création d’accroches et le montage pour TikTok et Reels.</p><div class="product-foot"><span class="price">$49.00</span><span class="small-link">Bientôt disponible</span></div></div>
-          </article>
-          <article class="product">
-            <div class="product-art art-icons"><span class="emoji" aria-hidden="true">🎨</span><span class="art-label">Design numérique</span></div>
-            <div class="product-body"><div class="product-type">Design · Interface</div><h3>Pack Icônes Pro</h3><p>500 icônes vectorielles pour enrichir vos sites web, applications et présentations.</p><div class="product-foot"><span class="price">$9.99</span><span class="small-link">Bientôt disponible</span></div></div>
-          </article>
-          <article class="product">
-            <div class="product-art art-photo"><span class="emoji" aria-hidden="true">📷</span><span class="art-label">Photo & retouche</span></div>
-            <div class="product-body"><div class="product-type">Photographie</div><h3>Presets Lightroom</h3><p>20 réglages pour donner à vos photos un rendu cohérent et soigné en quelques clics.</p><div class="product-foot"><span class="price">$12.99</span><span class="small-link">Bientôt disponible</span></div></div>
-          </article>
-          <article class="product">
-            <div class="product-art art-copy"><span class="emoji" aria-hidden="true">✍️</span><span class="art-label">Écriture & vente</span></div>
-            <div class="product-body"><div class="product-type">Marketing · Rédaction</div><h3>Formation Copywriting</h3><p>Apprenez à rédiger des pages de vente, des emails et des publications plus convaincants.</p><div class="product-foot"><span class="price">$34.99</span><span class="small-link">Bientôt disponible</span></div></div>
-          </article>
-        </div>
-
-        <div class="bundle">
-          <div><h3>Le pack complet DigitalStore</h3><p>Retrouvez les ressources du catalogue dans une offre groupée, lorsque le pack sera disponible.</p></div>
-          <div class="bundle-price"><del>$141.95</del> $89.00</div>
-          <a class="btn" href="mailto:storedigital246@gmail.com?subject=Information%20sur%20le%20pack%20DigitalStore">Demander des informations →</a>
-        </div>
-
-        <div class="promise-grid">
-          <div class="promise"><div class="promise-icon" aria-hidden="true">⚡</div><h4>Accès numérique</h4><p>Les modalités de livraison sont précisées sur chaque fiche produit.</p></div>
-          <div class="promise"><div class="promise-icon" aria-hidden="true">🔒</div><h4>Parcours clair</h4><p>Des informations lisibles pour vous aider à choisir en confiance.</p></div>
-          <div class="promise"><div class="promise-icon" aria-hidden="true">✉️</div><h4>Contact direct</h4><p>Une question ? Contactez notre équipe par email.</p></div>
-          <div class="promise"><div class="promise-icon" aria-hidden="true">🌍</div><h4>Depuis la RDC</h4><p>Un projet basé à Kinshasa, tourné vers une communauté internationale.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="brand-spotlight" id="marque">
-      <div class="container">
-        <div class="spotlight">
-          <div><div class="kicker">Notre univers mode</div><h2>DONA JACQUES</h2><p>Le streetwear comme expression de soi : une identité, une attitude et une ambition nées à Kinshasa. Entrez dans l’univers de la marque et découvrez ses collections.</p></div>
-          <a class="btn" href="dona-jacques.html">Visiter la marque <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-main">
-        <div class="footer-brand"><a class="brand" href="index.html">Digital<span>Store</span></a><p>Un espace pour découvrir des marques, apprendre de nouvelles compétences et donner vie à vos projets.</p></div>
-        <div class="footer-col"><h4>Explorer</h4><a href="#univers">Nos univers</a><a href="#produits">Produits digitaux</a><a href="dona-jacques.html">DONA JACQUES</a></div>
-        <div class="footer-col"><h4>Informations</h4><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">Conditions générales de vente</a><a href="confidentialite.html">Politique de confidentialité</a><a href="remboursement.html">Politique de remboursement</a></div>
-        <div class="footer-col"><h4>Nous contacter</h4><a href="mailto:storedigital246@gmail.com">storedigital246@gmail.com</a><a href="https://ig.me/m/masterweb75" target="_blank" rel="noopener noreferrer">Écrivez-nous sur Instagram : @masterweb75 ↗</a><p>Kinshasa, République démocratique du Congo 🇨🇩</p></div>
-      </div>
-      <div class="copyright"><span>© 2026 DigitalStore. Tous droits réservés.</span><span>Style. Créativité. Évolution.</span></div>
-    </div>
-  </footer>
-</body>
-</html>
+<header><div class="wrap nav">
+<a class="brand" href="#accueil">D&J DONA JACQUES<small>STREETWEAR • LUXE • KINSHASA</small></a>
+<nav aria-label="Navigation principale"><a href="#collections">Collections</a><a href="#babouches">Babouches</a><a href="#vetements">Vêtements</a><a href="#engagements">Notre vision</a></nav>
+<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><a class="btn" href="index.html">← DigitalStore</a><a class="btn" href="#commander">Commander</a></div>
+</div></header>
+<main id="accueil" class="wrap">
+<section class="hero"><img src="assets/dona-jacques-collection.png" alt="Campagne de la marque DONA JACQUES, collection streetwear D&J"></section>
+<section class="intro">
+<div><div class="eyebrow">Une marque • Une vision • Un style de vie</div><h1>Plus qu’une marque,<br><span class="gold">un style de vie.</span></h1></div>
+<div><p>DONA JACQUES associe élégance, confort et authenticité. Inspirée par Kinshasa et ouverte sur le monde, la marque propose un style affirmé pour celles et ceux qui avancent avec confiance.</p><p>Explorez nos univers : babouches, t-shirts, hoodies et pièces streetwear conçues autour de l’identité D&J.</p><div class="actions"><a class="btn" href="#collections">Découvrir les collections</a><a class="btn" href="#commander">Nous contacter</a></div></div>
+</section>
+<section id="collections" class="section">
+<div class="section-head"><div><div class="eyebrow">L’univers D&J</div><h2>Nos collections</h2></div><p>Choisissez votre style et contactez-nous pour commander.</p></div>
+<div class="grid">
+<article class="collection" id="babouches"><img src="assets/babouches-collection.png" alt="Collection de babouches DONA JACQUES"><div class="collection-info"><div><h3>Babouches D&J</h3><p>Élégance discrète, confort quotidien et détails signature.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
+<article class="collection" id="vetements"><img src="assets/tshirts-collection.png" alt="Collection de t-shirts DONA JACQUES"><div class="collection-info"><div><h3>T-shirts & polos</h3><p>Des pièces essentielles, graphiques et faciles à porter.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
+<article class="collection"><img src="assets/hoodies-collection.png" alt="Collection de hoodies, pulls et ensembles D&J"><div class="collection-info"><div><h3>Hoodies, pulls & ensembles</h3><p>Confort, caractère et influences internationales.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
+<article class="collection"><img src="assets/dona-jacques-collection.png" alt="Univers global de la marque DONA JACQUES"><div class="collection-info"><div><h3>Streetwear & accessoires</h3><p>Construisez un look complet avec l’identité D&J.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
+</div>
+</section>
+<section id="engagements" class="section"><div class="eyebrow">La signature D&J</div><h2>Le détail fait la différence.</h2>
+<div class="promise"><div><strong>✦ Style distinctif</strong><span>Une identité visuelle reconnaissable, inspirée par la rue et l’élégance.</span></div><div><strong>◇ Confort au quotidien</strong><span>Des pièces pensées pour être portées et associées facilement.</span></div><div><strong>♧ Finitions soignées</strong><span>Une attention portée aux détails et à la présentation.</span></div><div><strong>◎ Esprit de Kinshasa</strong><span>Une marque congolaise avec une ambition ouverte sur le monde.</span></div></div>
+</section>
+<section id="commander" class="section">
+<div class="section-head"><div><div class="eyebrow">Passez à l’action</div><h2>Votre style commence ici.</h2><p>Pour connaître les stocks, tailles, couleurs et frais de livraison, écrivez-nous.</p></div></div>
+<div class="actions"><a class="btn" href="https://ig.me/m/masterweb75" target="_blank" rel="noopener">Commander sur Instagram</a><a class="btn" href="mailto:contact@digitalstore.cd?subject=Commande%20DONA%20JACQUES">Nous écrire par e-mail</a></div>
+</section>
+</main>
+<footer><div class="wrap foot"><div><span class="gold">D&J DONA JACQUES</span><br>Streetwear • Luxe • Kinshasa</div><div><a href="index.html" style="color:var(--gold);text-decoration:none">Retour à DigitalStore →</a></div><div>Une marque. Une vision. Un style de vie.</div><div>© <span id="year"></span> DONA JACQUES</div></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
