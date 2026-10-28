@@ -1,332 +1,399 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DONA JACQUES | Collection officielle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DONA JACQUES — Streetwear premium, collections et lookbook | Kinshasa</title>
+  <meta name="description" content="DONA JACQUES : une marque de streetwear née à Kinshasa. Découvrez la vision de la marque et la Collection 01 : T-shirt, hoodie, pull-over, cargo, pantalon, ensemble et babouches.">
+  <meta name="theme-color" content="#101114">
+  <style>
+    :root{--bg:#101114;--bg2:#15161a;--line:#2a2b31;--text:#f4f4f5;--muted:#a9abb3;--gold:#d8b56d;--gold-hi:#e8c987;--radius:22px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    .container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+    .serif{font-family:Georgia,"Times New Roman",serif}
+    header{position:sticky;top:0;z-index:20;background:rgba(16,17,20,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;letter-spacing:.14em;white-space:nowrap}
+    .brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:28px;font-size:.88rem;font-weight:600;color:#c9cbd2}
+    .nav-links a:hover{color:var(--gold)}
+    .back{border:1px solid #3a3b42;padding:10px 16px;border-radius:999px;font-size:.84rem;font-weight:700;white-space:nowrap;transition:.2s}
+    .back:hover{border-color:var(--gold);color:var(--gold)}
+    .hero{position:relative;overflow:hidden;padding:112px 0 104px;background:radial-gradient(ellipse at 78% 18%,#2b2310 0,transparent 46%)}
+    .hero:before{content:"D&J";position:absolute;right:-2%;top:2%;font-family:Georgia,serif;font-size:min(50vw,560px);line-height:.8;color:rgba(216,181,109,.05);pointer-events:none}
+    .hero .container{position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(3.2rem,12vw,8rem);line-height:.94;letter-spacing:.01em}
+    h1 em{font-style:normal;color:var(--gold)}
+    .tag{font-family:Georgia,serif;font-size:clamp(1.2rem,2.6vw,1.6rem);margin-top:28px}
+    .lead{max-width:560px;color:var(--muted);margin-top:14px;font-size:1.02rem}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:.9rem;border:1px solid transparent;transition:transform .2s,background .2s,color .2s,border-color .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:#151515}.btn-gold:hover{background:var(--gold-hi)}
+    .btn-line{border-color:#4a4b52;color:var(--text)}.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+    section{padding:92px 0}
+    .alt{background:var(--bg2);border-block:1px solid var(--line)}
+    .kicker{color:var(--gold);font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+    h2{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.1}
+    .vision{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+    .vision p{color:var(--muted);font-size:1.02rem}
+    .vals{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px}
+    .vals div{border-top:1px solid var(--line);padding-top:18px}
+    .vals b{display:block;font-family:Georgia,serif;font-size:1.25rem;color:var(--gold);margin-bottom:6px}
+    .vals span{color:var(--muted);font-size:.9rem}
+    .head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:40px}
+    .head p{max-width:440px;color:var(--muted);font-size:.95rem}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .piece{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,#17181c,#0f1013);overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+    .piece:hover{border-color:var(--gold);transform:translateY(-5px)}
+    .art{height:270px;display:grid;place-items:center;border-bottom:1px solid #202126;background:radial-gradient(circle at 50% 42%,#2a2210 0,transparent 62%)}
+    .art svg{width:min(80%,232px);height:auto}
+    .pb{padding:24px;display:flex;flex-direction:column;flex:1}
+    .pb h3{font-family:Georgia,serif;font-size:1.6rem;font-weight:700;margin-bottom:6px}
+    .pb p{color:var(--muted);font-size:.9rem;flex:1}
+    .foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid #23242a}
+    .price{display:block;font-family:Georgia,serif;font-size:1.6rem;font-weight:700;line-height:1.2;margin-bottom:2px}.soon{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+    .more{font-size:.82rem;font-weight:700}.more:hover{color:var(--gold)}
+    .panel{border:1px solid var(--line);border-radius:var(--radius);padding:56px;text-align:center;background:radial-gradient(ellipse at 50% 0,#2a2210 0,transparent 60%),#0f1013}
+    .panel p{color:var(--muted);max-width:520px;margin:14px auto 0}
+    .panel .actions{justify-content:center}
+    footer{background:#0c0e12;color:#c2c6ce;padding:44px 0 24px;border-top:1px solid var(--line)}
+    .fm{display:flex;justify-content:space-between;gap:35px;flex-wrap:wrap}
+    .fb{max-width:330px}.fb .brand{display:inline-block;color:#fff;margin-bottom:12px}
+    .fb p{font-size:.84rem;color:#969da9}
+    .fc h4{color:#fff;font-size:.85rem;margin-bottom:13px}
+    .fc a,.fc p{display:block;font-size:.82rem;color:#aeb4bf;margin-bottom:8px}.fc a:hover{color:#fff}
+    .copy{border-top:1px solid #272a31;margin-top:32px;padding-top:18px;font-size:.75rem;color:#858c98;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.vals{grid-template-columns:1fr 1fr}.vision{grid-template-columns:1fr;gap:20px}}
+    @media(max-width:640px){
+      .container{width:min(100% - 28px,1160px)}
+      .nav-links{display:none}.nav{min-height:66px}.brand{font-size:1.02rem}.back{padding:9px 13px;font-size:.78rem}
+      .hero{padding:70px 0 64px}section{padding:60px 0}
+      .grid{grid-template-columns:1fr}.head{flex-direction:column;align-items:flex-start;margin-bottom:28px}
+      .vals{gap:20px;margin-top:40px}.art{height:210px}
+      .panel{padding:36px 22px}.copy{flex-direction:column}
+    }
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  background: #080808;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    .art{overflow:hidden;background:#17181c}
+    .art .product-photo{width:100%;height:100%;min-height:250px;display:block;object-fit:cover;object-position:center 42%}
+    .piece[hidden]{display:none!important}
+    @media(max-width:640px){.art .product-photo{min-height:220px}}
+    .catalog-tools{display:flex;flex-wrap:wrap;gap:10px;margin:-12px 0 28px}
+    .filter-btn{border:1px solid #383941;background:#15161a;color:#d8d9df;padding:9px 15px;border-radius:999px;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
+    .filter-btn:hover,.filter-btn.active{background:var(--gold);border-color:var(--gold);color:#171717}
+    .piece{position:relative}
+    .art{position:relative;min-height:250px}
+    .badge{position:absolute;top:14px;left:14px;background:rgba(216,181,109,.12);border:1px solid rgba(216,181,109,.45);color:var(--gold);padding:5px 9px;border-radius:999px;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .product-meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+    .product-meta span{font-size:.72rem;color:#c9cbd2;border:1px solid #303139;border-radius:999px;padding:4px 8px}
+    .price-note{font-size:.74rem;color:#a9abb3;margin-top:5px}
+    .pb .foot{align-items:flex-end}
+    .more{display:inline-flex;align-items:center;justify-content:center;border:1px solid #494a52;border-radius:999px;padding:10px 12px;white-space:nowrap}
+    .more:hover{background:var(--gold);border-color:var(--gold);color:#111}
+    .catalog-note{margin-top:26px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;color:var(--muted);font-size:.86rem;background:#121317}
+    .catalog-note strong{color:var(--gold)}
+    @media(max-width:640px){.art{height:220px}.catalog-tools{gap:7px}.filter-btn{padding:8px 11px;font-size:.76rem}.pb{padding:20px}.pb h3{font-size:1.45rem}.more{font-size:.75rem;padding:9px 10px}}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  
+    .lookbook-section{background:linear-gradient(180deg,#111216,#17171a);border-block:1px solid var(--line)}
+    .lookbook-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .lookbook-card{overflow:hidden;border:1px solid #35343a;border-radius:18px;background:#0d0e10;box-shadow:0 12px 35px #0003}
+    .lookbook-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#202024}
+    .lookbook-copy{padding:18px 20px 20px}
+    .lookbook-copy h3{font-family:Georgia,'Times New Roman',serif;font-size:1.35rem;color:var(--gold-hi);margin:4px 0 6px}
+    .lookbook-copy p,.lookbook-note{color:var(--muted);font-size:.93rem}
+    .lookbook-note{margin-top:18px;padding:14px 16px;border-left:3px solid var(--gold);background:#ffffff05}
+    @media(max-width:700px){.lookbook-grid{grid-template-columns:1fr}.lookbook-copy{padding:15px}.lookbook-card img{aspect-ratio:4/3}}
 
-.container {
-  width: 92%;
-  max-width: 1150px;
-  margin: auto;
-}
 
-header {
-  background: #080808;
-  border-bottom: 1px solid #292929;
-  padding: 22px 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.logo span,
-h1 span {
-  color: #d6b45b;
-}
-
-nav {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-nav a:hover {
-  color: #d6b45b;
-}
-
-.hero {
-  padding: 28px 0;
-}
-
-.hero img {
-  width: 100%;
-  display: block;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-.intro {
-  text-align: center;
-  padding: 25px 0 45px;
-}
-
-.subtitle {
-  color: #d6b45b;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: clamp(32px, 6vw, 65px);
-  margin: 15px 0;
-}
-
-.intro p {
-  max-width: 700px;
-  margin: auto;
-  line-height: 1.8;
-  color: #ccc;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 22px;
-  padding: 13px 20px;
-  border: 1px solid #d6b45b;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.button.gold {
-  background: #d6b45b;
-  color: #111;
-}
-
-.button:hover {
-  opacity: .8;
-}
-
-.section-title {
-  margin: 25px 0;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.section-title p {
-  color: #bbb;
-  line-height: 1.7;
-}
-
-.collections {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-  padding-bottom: 45px;
-}
-
-.collection {
-  background: #151515;
-  border: 1px solid #2b2b2b;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.collection img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-  background: #202020;
-}
-
-.collection-content {
-  padding: 20px;
-}
-
-.collection h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.collection p {
-  color: #bbb;
-  line-height: 1.7;
-}
-
-footer {
-  border-top: 1px solid #292929;
-  padding: 30px 0;
-  color: #bbb;
-  line-height: 1.8;
-}
-
-footer strong {
-  color: white;
-}
-
-@media (max-width: 650px) {
-  .collections {
-    grid-template-columns: 1fr;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    gap: 13px;
-  }
-}
-</style>
+    .ph{height:100%;min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--gold);background:radial-gradient(circle at 50% 42%,#2a2210 0,#15161a 70%)}
+    .ph b{font-family:Georgia,serif;font-size:2.4rem;letter-spacing:.08em}.ph span{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .lookbook-card img{aspect-ratio:auto;height:auto}
+    .lookbook-card:first-child{grid-column:1/-1}
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index-1.html" aria-label="DONA JACQUES accueil">DONA <span>JACQUES</span></a>
+      <nav class="nav-links" aria-label="Navigation de la marque">
+        <a href="#vision">La vision</a><a href="#collections">Collections</a><a href="#collection">Boutique</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="back" href="index.html">← DigitalStore</a>
+    </div>
+  </header>
 
-<header>
-  <div class="container navbar">
-    <a href="#accueil" class="logo">DONA <span>JACQUES</span></a>
-
-    <nav>
-      <a href="#babouches">Babouches</a>
-      <a href="#vetements">Vêtements</a>
-      <a href="#sweats">Sweats</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container" id="accueil">
-
-  <section class="hero">
-    <img
-      src="Collection%20Dona%20Jacques.png"
-      alt="Collection DONA JACQUES"
-    >
-  </section>
-
-  <section class="intro">
-    <div class="subtitle">D&J — Style sans frontières</div>
-
-    <h1>Affirme ton style.<br>
-      <span>Écris ton histoire.</span>
-    </h1>
-
-    <p>
-      DONA JACQUES est une marque de vêtements inspirée par la jeunesse,
-      la confiance, l'amour et l'évolution. Découvre notre univers streetwear
-      et nos collections pensées pour affirmer ton identité.
-    </p>
-
-    <a href="#collections" class="button gold">
-      Découvrir les collections
-    </a>
-  </section>
-
-  <section id="collections">
-
-    <div class="section-title">
-      <h2>Nos collections</h2>
-      <p>
-        Découvre l'univers DONA JACQUES et nos différentes inspirations.
-        Contacte-nous pour connaître les modèles, les tailles et les prix disponibles.
-      </p>
+  <main>
+    <div class="hero">
+      <div class="container">
+        <div class="eyebrow">Streetwear · Kinshasa</div>
+        <h1>DONA<br><em>JACQUES</em></h1>
+        <p class="tag">Plus qu’un style, une mentalité.</p>
+        <p class="lead">Une marque née de la jeunesse, de l’ambition et de l’envie de construire une identité qui dépasse les frontières.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#collection">Découvrir la Collection 01 <span aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="#contact">Être prévenu du lancement</a>
+        </div>
+      </div>
     </div>
 
-    <div class="collections">
-
-      <article class="collection" id="babouches">
-        <img
-          src="collection-babouches.png"
-          alt="Collection de babouches DONA JACQUES"
-        >
-
-        <div class="collection-content">
-          <h3>Babouches D&J</h3>
-          <p>
-            Un style sobre et élégant, avec une identité discrète
-            pour compléter ton look.
-          </p>
-          <a href="#contact" class="button">Demander des informations</a>
+    <section id="vision" class="alt">
+      <div class="container">
+        <div class="vision">
+          <div><div class="kicker">La vision</div><h2>Une marque, une même vision.</h2></div>
+          <p>DONA JACQUES associe l’énergie de la jeunesse à une esthétique premium et contemporaine. L’ambition : créer une marque africaine capable de parler à une génération mondiale, avec une identité forte et reconnaissable.</p>
         </div>
-      </article>
-
-      <article class="collection" id="vetements">
-        <img
-          src="Collection%20Dona%20Jacques.png"
-          alt="Collection de vêtements DONA JACQUES"
-        >
-
-        <div class="collection-content">
-          <h3>T-shirts et vêtements</h3>
-          <p>
-            Des inspirations streetwear pour exprimer ta personnalité
-            et créer ton propre style.
-          </p>
-          <a href="#contact" class="button">Demander des informations</a>
+        <div class="vals">
+          <div><b>Amour</b><span>Créer avec passion et donner du sens à chaque pièce.</span></div>
+          <div><b>Jeunesse</b><span>Une énergie nouvelle, tournée vers l’avenir.</span></div>
+          <div><b>Confiance</b><span>Une identité qui encourage à avancer avec assurance.</span></div>
+          <div><b>Évolution</b><span>Commencer petit, apprendre vite, construire durablement.</span></div>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="collection" id="sweats">
-        <img
-          src="collection-sweats-%C3%A0-capuches.png"
-          alt="Collection de sweats à capuche DONA JACQUES"
-        >
 
-        <div class="collection-content">
-          <h3>Sweats et hoodies</h3>
-          <p>
-            Des modèles confortables et modernes pour un style
-            streetwear au quotidien.
-          </p>
-          <a href="#contact" class="button">Demander des informations</a>
+    <section id="collections" class="lookbook-section">
+      <div class="container">
+        <div class="head">
+          <div><div class="kicker">Le lookbook D&J</div><h2>Nos univers, une seule identité.</h2></div>
+          <p>Explore les directions créatives de DONA JACQUES : streetwear américain, inspirations artistiques chinoises et identité congolaise. Les motifs sont volontairement réservés à certaines pièces, tandis que les autres restent épurées.</p>
         </div>
-      </article>
-
-      <article class="collection">
-        <img
-          src="Collection%20Dona%20Jacques.png"
-          alt="Univers de la marque DONA JACQUES"
-        >
-
-        <div class="collection-content">
-          <h3>L'univers D&J</h3>
-          <p>
-            Une marque qui représente la confiance, l'ambition,
-            la jeunesse et l'évolution.
-          </p>
-          <a href="#contact" class="button">Découvrir la marque</a>
+        <div class="lookbook-grid">
+          <article class="lookbook-card"><img src="01-collection-complete.jpg" alt="Visuel conceptuel : Collection complète" loading="lazy"><div class="lookbook-copy"><span class="kicker">D&J LOOKBOOK</span><h3>Collection complète</h3><p>Toutes les lignes D&J réunies dans un univers cohérent.</p></div></article>
+          <article class="lookbook-card"><img src="02-motifs-chinois.jpg" alt="Visuel conceptuel : Motifs chinois, signature D&J" loading="lazy"><div class="lookbook-copy"><span class="kicker">D&J LOOKBOOK</span><h3>Motifs chinois, signature D&J</h3><p>Des touches graphiques inspirées de l’art chinois, utilisées sur quelques pièces fortes plutôt que partout.</p></div></article>
+          <article class="lookbook-card"><img src="03-manteaux-vestes.jpg" alt="Visuel conceptuel : Collection femme" loading="lazy"><div class="lookbook-copy"><span class="kicker">D&J LOOKBOOK</span><h3>Collection femme</h3><p>Des coupes modernes et féminines, avec des logos discrets et des couleurs équilibrées.</p></div></article>
+          <article class="lookbook-card"><img src="04-baskets-chaussures.jpg" alt="Visuel conceptuel : Baskets & chaussures" loading="lazy"><div class="lookbook-copy"><span class="kicker">D&J LOOKBOOK</span><h3>Baskets & chaussures</h3><p>Des silhouettes épurées, une signature discrète et quelques accents contrastés.</p></div></article>
+          <article class="lookbook-card"><img src="05-accessoires.jpg" alt="Visuel conceptuel : Casquettes, sacs & accessoires" loading="lazy"><div class="lookbook-copy"><span class="kicker">D&J LOOKBOOK</span><h3>Casquettes, sacs & accessoires</h3><p>Des accessoires pratiques avec des finitions premium et une identité D&J cohérente.</p></div></article>
         </div>
-      </article>
+        <p class="lookbook-note">Ces visuels sont des propositions créatives pour orienter la collection, et non une confirmation de stock. Les modèles, logos définitifs, matières, tailles, prix et disponibilités devront être validés avant la vente.</p>
+      </div>
+    </section>
 
-    </div>
-  </section>
+    <section id="collection">
+      <div class="container">
+        <div class="head">
+          <div><div class="kicker">Première capsule</div><h2>Collection 01</h2></div>
+          <p>Explore les essentiels DONA JACQUES : des pièces streetwear pensées pour le quotidien. Les photos ci-dessous présentent des exemples de style pour visualiser la collection. Les modèles exacts, tailles, couleurs, stocks et prix définitifs seront confirmés avant toute commande.</p>
+        </div>
+        <div class="catalog-tools" aria-label="Filtrer les produits">
+          <button class="filter-btn active" type="button" data-filter="Tous">Tout voir</button>
+          <button class="filter-btn" type="button" data-filter="Hauts">Hauts</button>
+          <button class="filter-btn" type="button" data-filter="Bas">Pantalons &amp; shorts</button>
+          <button class="filter-btn" type="button" data-filter="Ensembles">Ensembles</button>
+          <button class="filter-btn" type="button" data-filter="Chaussures">Chaussures</button>
+          <button class="filter-btn" type="button" data-filter="Accessoires">Accessoires</button>
+        </div>
+        <div class="grid">
+          <article class="piece" data-category="Hauts">
+            <div class="art"><span class="badge">Essentiel</span><div class="ph" role="img" aria-label="Photo à venir"><b>D&amp;J</b><span>Photo à venir</span></div></div>
+            <div class="pb"><h3>T-shirt Signature</h3><p>Une coupe streetwear facile à porter, avec une signature D&J discrète.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, blanc</span></div>
+              <div class="foot"><div><span class="price">$25</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20T-shirt%20Signature&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20T-shirt%20Signature%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Hauts">
+            <div class="art"><span class="badge">Signature</span><img class="product-photo" src="hoodie-dj.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Hoodie D&J</h3><p>Un hoodie à capuche pour une silhouette urbaine et confortable.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, gris</span></div>
+              <div class="foot"><div><span class="price">$45</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Hoodie%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Hoodie%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Hauts">
+            <div class="art"><span class="badge">Nouveau</span><img class="product-photo" src="pull-over-premium.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Pull-over Premium</h3><p>Un pull sobre, idéal pour superposer les pièces et créer un look soigné.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, crème</span></div>
+              <div class="foot"><div><span class="price">$35</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Pull-over%20Premium&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Pull-over%20Premium%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Bas">
+            <div class="art"><span class="badge">Urbain</span><img class="product-photo" src="pantalon-cargo.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Pantalon Cargo</h3><p>Des poches pratiques et une coupe moderne pour un style streetwear affirmé.</p>
+              <div class="product-meta"><span>S, M, L, XL</span><span>Noir, kaki</span></div>
+              <div class="foot"><div><span class="price">$40</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Pantalon%20Cargo&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Pantalon%20Cargo%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Bas">
+            <div class="art"><span class="badge">Essentiel</span><div class="ph" role="img" aria-label="Photo à venir"><b>D&amp;J</b><span>Photo à venir</span></div></div>
+            <div class="pb"><h3>Pantalon Street</h3><p>Une pièce polyvalente à associer avec un tee-shirt, un hoodie ou un pull.</p>
+              <div class="product-meta"><span>S, M, L, XL</span><span>Noir, beige</span></div>
+              <div class="foot"><div><span class="price">$35</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Pantalon%20Street&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Pantalon%20Street%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Ensembles">
+            <div class="art"><span class="badge">Ensemble</span><img class="product-photo" src="complet-pull-pantalon.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Complet Pull + Pantalon</h3><p>Un ensemble coordonné pour un look complet, confortable et cohérent.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, gris</span></div>
+              <div class="foot"><div><span class="price">$70</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Complet%20Pull%20%2B%20Pantalon&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Complet%20Pull%20%2B%20Pantalon%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Accessoire</span><img class="product-photo" src="babouches-dj.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Babouches D&J</h3><p>Une option simple et confortable pour compléter une tenue décontractée.</p>
+              <div class="product-meta"><span>À confirmer</span><span>Noir, marron</span></div>
+              <div class="foot"><div><span class="price">$20</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Babouches%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Babouches%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Accessoires">
+            <div class="art"><span class="badge">Accessoire</span><img class="product-photo" src="casquette-signature.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Casquette Signature</h3><p>Un accessoire minimaliste pour renforcer l’identité de la marque.</p>
+              <div class="product-meta"><span>Taille ajustable</span><span>Noir, beige</span></div>
+              <div class="foot"><div><span class="price">$20</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Casquette%20Signature&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Casquette%20Signature%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Accessoires">
+            <div class="art"><span class="badge">Accessoire</span><img class="product-photo" src="sac-streetwear.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Sac Streetwear</h3><p>Un sac pratique pour les sorties et les essentiels du quotidien.</p>
+              <div class="product-meta"><span>À confirmer</span><span>Noir</span></div>
+              <div class="foot"><div><span class="price">$30</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Sac%20Streetwear&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Sac%20Streetwear%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Bas">
+            <div class="art"><span class="badge">Essentiel</span><img class="product-photo" src="short-street.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Short Street</h3><p>Une pièce légère pour les journées chaudes et les tenues décontractées.</p>
+              <div class="product-meta"><span>S, M, L, XL</span><span>Noir, gris</span></div>
+              <div class="foot"><div><span class="price">$25</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Short%20Street&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Short%20Street%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Hauts">
+            <div class="art"><span class="badge">Smart casual</span><img class="product-photo" src="polo-dj.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Polo D&J</h3><p>Une alternative plus habillée au tee-shirt, avec une finition épurée.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, blanc</span></div>
+              <div class="foot"><div><span class="price">$30</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Polo%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Polo%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Accessoires">
+            <div class="art"><span class="badge">Accessoire</span><img class="product-photo" src="chaussettes-dj.jpg" alt="Visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Chaussettes D&J</h3><p>Un détail discret pour compléter une tenue de la tête aux pieds.</p>
+              <div class="product-meta"><span>Tailles à confirmer</span><span>Noir, blanc</span></div>
+              <div class="foot"><div><span class="price">$10</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20demande%20d%27information%20pour%20Chaussettes%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Chaussettes%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20me%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20disponibles%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
 
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Coloris signature</span><div class="ph" role="img" aria-label="Photo à venir"><b>D&amp;J</b><span>Photo à venir</span></div></div>
+            <div class="pb"><h3>Babouche blanche — bande rouge &amp; verte</h3><p>Semelle blanche épaisse et bande tricolore pour une version plus vive.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Blanc, rouge, vert</span></div>
+              <div class="foot"><div><span class="price">$28</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Babouche%20blanche%20%E2%80%94%20bande%20rouge%20%26%20verte&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Babouche%20blanche%20%E2%80%94%20bande%20rouge%20%26%20verte%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Noir sur noir</span><div class="ph" role="img" aria-label="Photo à venir"><b>D&amp;J</b><span>Photo à venir</span></div></div>
+            <div class="pb"><h3>Babouche noire — logo noir</h3><p>Version entièrement noire : semelle noire, bande noire et logo noir ton sur ton.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir mat, noir brillant</span></div>
+              <div class="foot"><div><span class="price">$28</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Babouche%20noire%20%E2%80%94%20logo%20noir&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Babouche%20noire%20%E2%80%94%20logo%20noir%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Premium</span><img class="product-photo" src="babouche-luxe-brodee.jpg" alt="Babouche luxe noire brodée — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Babouche luxe noire brodée</h3><p>Silhouette premium avec détails discrets et finitions ton sur ton.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, détails dorés</span></div>
+              <div class="foot"><div><span class="price">$35</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Babouche%20luxe%20noire%20brod%C3%A9e&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Babouche%20luxe%20noire%20brod%C3%A9e%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Édition spéciale</span><img class="product-photo" src="babouche-broderie-artistique.jpg" alt="Babouche noire broderie artistique — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Babouche noire broderie artistique</h3><p>Une alternative plus habillée avec broderie décorative.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, or</span></div>
+              <div class="foot"><div><span class="price">$38</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Babouche%20noire%20broderie%20artistique&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Babouche%20noire%20broderie%20artistique%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Hauts">
+            <div class="art"><span class="badge">Street utility</span><img class="product-photo" src="gilet-sans-manches.jpg" alt="Gilet sans manches D&amp;J — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Gilet sans manches D&amp;J</h3><p>Gilet matelassé noir avec petits détails dorés pour un style urbain affirmé.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, noir/or</span></div>
+              <div class="foot"><div><span class="price">$40</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Gilet%20sans%20manches%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Gilet%20sans%20manches%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Hauts">
+            <div class="art"><span class="badge">Graphique</span><img class="product-photo" src="t-shirt-graphique.jpg" alt="T-shirt graphique D&amp;J — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>T-shirt graphique D&amp;J</h3><p>T-shirt oversize avec graphisme central et signature de marque.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, blanc</span></div>
+              <div class="foot"><div><span class="price">$28</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20T-shirt%20graphique%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20T-shirt%20graphique%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Nouveau</span><img class="product-photo" src="baskets-street.jpg" alt="Baskets D&amp;J Street — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Baskets D&amp;J Street</h3><p>Baskets streetwear noires avec accents dorés, pensées pour compléter la tenue.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir/or</span></div>
+              <div class="foot"><div><span class="price">$75</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Baskets%20D%26J%20Street&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Baskets%20D%26J%20Street%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Chaussures">
+            <div class="art"><span class="badge">Nouveau</span><div class="ph" role="img" aria-label="Photo à venir"><b>D&amp;J</b><span>Photo à venir</span></div></div>
+            <div class="pb"><h3>Baskets D&amp;J Contrast</h3><p>Une version claire avec détails contrastés pour varier les looks.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Blanc, noir, or</span></div>
+              <div class="foot"><div><span class="price">$70</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Baskets%20D%26J%20Contrast&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Baskets%20D%26J%20Contrast%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Bas">
+            <div class="art"><span class="badge">Techwear</span><img class="product-photo" src="cargo-tech-noir.jpg" alt="Cargo Tech noir D&amp;J — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Cargo Tech noir D&amp;J</h3><p>Cargo noir à poches utilitaires et petits détails dorés.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, olive</span></div>
+              <div class="foot"><div><span class="price">$38</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Cargo%20Tech%20noir%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Cargo%20Tech%20noir%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+          <article class="piece" data-category="Accessoires">
+            <div class="art"><span class="badge">Accessoire</span><img class="product-photo" src="bonnet-cotele.jpg" alt="Bonnet côtelé D&amp;J — visuel de référence DONA JACQUES" loading="lazy"></div>
+            <div class="pb"><h3>Bonnet côtelé D&amp;J</h3><p>Bonnet noir avec monogramme discret pour compléter les tenues.</p>
+              <div class="product-meta"><span>M, L, XL</span><span>Noir, gris</span></div>
+              <div class="foot"><div><span class="price">$18</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20Bonnet%20c%C3%B4tel%C3%A9%20D%26J&body=Bonjour%2C%20je%20souhaite%20recevoir%20des%20informations%20sur%20Bonnet%20c%C3%B4tel%C3%A9%20D%26J%20%28DONA%20JACQUES%29.%20Merci%20de%20confirmer%20le%20prix%2C%20les%20tailles%2C%20les%20couleurs%20et%20la%20disponibilit%C3%A9.">Demander →</a></div>
+            </div>
+          </article>
+        </div>
+        <div class="catalog-note"><strong>Important :</strong> les produits, prix, tailles et couleurs présentés sont des propositions de catalogue. Confirme les stocks, les prix réels et les modalités de livraison avant d’accepter une commande. Les photos servent de références visuelles de style ; certaines images sont des inspirations de modèles et ne garantissent pas que ces articles exacts soient en stock. Les babouches noires ton sur ton représentent le coloris souhaité : semelle, dessus et logo noirs.</div>
+      </div>
+    </section>
+
+    <section id="contact" class="alt">
+      <div class="container">
+        <div class="panel">
+          <div class="kicker">Lancement</div>
+          <h2>Soyez parmi les premiers informés.</h2>
+          <p>Les photos officielles seront publiées au lancement de la Collection 01. Écrivez-nous par email ou suivez les coulisses sur Instagram.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="mailto:contact@digitalstore.cd?subject=DONA%20JACQUES%20%3A%20me%20pr%C3%A9venir%20du%20lancement">Nous écrire par email</a>
+            <a class="btn btn-line" href="https://www.instagram.com/masterweb75/" target="_blank" rel="noopener noreferrer">Instagram @masterweb75 ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <p style="max-width:1160px;margin:20px auto;padding:0 20px;color:#a9abb3;font-size:.8rem">Visuels de collection : maquettes de design pour présenter l’identité DONA JACQUES. Les modèles, détails et disponibilités sont à confirmer avant commercialisation.</p>
 </main>
 
-<footer id="contact">
-  <div class="container">
-    <strong>DONA JACQUES — D&J</strong><br>
-    Pour les commandes, les prix et les disponibilités,
-    contacte directement la marque.<br>
-    Ajoute ton lien Instagram officiel dans cette section avant publication.
-  </div>
-</footer>
-
+  <footer>
+    <div class="container">
+      <div class="fm">
+        <div class="fb"><a class="brand" href="index-1.html">DONA <span>JACQUES</span></a><p>Streetwear né à Kinshasa. Une marque de l’univers DigitalStore.</p></div>
+        <div class="fc"><h4>Explorer</h4><a href="index.html">DigitalStore</a><a href="#collection">Collection 01</a><a href="#contact">Être prévenu</a></div>
+        <div class="fc"><h4>Informations</h4><a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">Conditions générales de vente</a><a href="confidentialite.html">Politique de confidentialité</a><a href="remboursement.html">Politique de remboursement</a></div>
+        <div class="fc"><h4>Nous contacter</h4><a href="mailto:contact@digitalstore.cd">contact@digitalstore.cd</a><p>Kinshasa, République démocratique du Congo 🇨🇩</p></div>
+      </div>
+      <div class="copy"><span>© 2026 DONA JACQUES. Tous droits réservés.</span><span>Style. Créativité. Évolution.</span></div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.piece');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          buttons.forEach(item => item.classList.toggle('active', item === button));
+          cards.forEach(card => {
+            card.hidden = filter !== 'Tous' && card.dataset.category !== filter;
+          });
+        });
+      });
+    })();
+  </script>
 </body>
-  </html>
+</html>
