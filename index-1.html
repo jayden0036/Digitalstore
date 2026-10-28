@@ -2,53 +2,331 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="DONA JACQUES — streetwear, luxe et style de vie. Découvrez les collections D&J à Kinshasa.">
-<title>DONA JACQUES — Streetwear • Luxe • Kinshasa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DONA JACQUES | Collection officielle</title>
+
 <style>
-:root{--black:#080909;--panel:#111313;--gold:#e8bd59;--cream:#f3eee4;--muted:#bcb8ad}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{width:min(1240px,94%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:rgba(8,9,9,.96);border-bottom:1px solid #5b4926;backdrop-filter:blur(12px)}
-.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-family:Georgia,serif;font-size:1.25rem;letter-spacing:.12em;color:var(--gold);font-weight:bold}.brand small{display:block;font:9px Arial;letter-spacing:.28em;color:var(--cream);margin-top:4px}
-nav{display:flex;gap:22px;align-items:center;font-size:.9rem;color:#ddd}nav a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border:1px solid var(--gold);color:var(--gold);border-radius:3px;font-weight:bold;transition:.2s}.btn:hover{background:var(--gold);color:#111}
-.hero{padding:22px 0 0}.hero img{width:100%;display:block;border:1px solid #342b1b;border-radius:5px}.intro{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;padding:36px 0}.eyebrow{color:var(--gold);letter-spacing:.25em;text-transform:uppercase;font-size:.75rem}.intro h1{font:clamp(2rem,4.5vw,4.1rem)/1.03 Georgia,serif;margin:10px 0 14px}.intro p{line-height:1.75;color:#c9c5bc;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-.section{padding:30px 0 42px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:18px}.section h2{font:clamp(1.7rem,3vw,2.5rem) Georgia,serif;margin:6px 0;color:var(--cream)}.section-head p{margin:0;color:var(--muted);font-size:.92rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.collection{background:var(--panel);border:1px solid #35302a;border-radius:5px;overflow:hidden}.collection img{width:100%;height:auto;display:block;transition:transform .35s}.collection:hover img{transform:scale(1.015)}.collection-info{padding:18px;display:flex;justify-content:space-between;gap:15px;align-items:center}.collection-info h3{margin:0 0 6px;font-size:1.1rem}.collection-info p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}.collection-info .btn{white-space:nowrap;padding:10px 13px;font-size:.83rem}
-.promise{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#4d3e24;border:1px solid #4d3e24;margin:15px 0 45px}.promise div{background:#101111;padding:22px 18px}.promise strong{display:block;color:var(--gold);margin-bottom:8px}.promise span{font-size:.88rem;line-height:1.55;color:#c6c2b9}
-footer{border-top:1px solid #4d3e24;padding:25px 0;color:#aaa;font-size:.85rem}.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.gold{color:var(--gold)}
-@media(max-width:760px){.nav{padding:14px 0;align-items:flex-start;flex-wrap:wrap}.nav nav{order:3;width:100%;overflow:auto;padding-bottom:4px;gap:18px}.nav .btn{padding:9px 12px}.intro{grid-template-columns:1fr;padding:25px 0}.grid{grid-template-columns:1fr}.collection-info{align-items:flex-start;flex-direction:column}.promise{grid-template-columns:repeat(2,1fr)}.section-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:420px){.promise{grid-template-columns:1fr}.brand{font-size:1.05rem}}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 92%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+header {
+  background: #080808;
+  border-bottom: 1px solid #292929;
+  padding: 22px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span,
+h1 span {
+  color: #d6b45b;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a:hover {
+  color: #d6b45b;
+}
+
+.hero {
+  padding: 28px 0;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.intro {
+  text-align: center;
+  padding: 25px 0 45px;
+}
+
+.subtitle {
+  color: #d6b45b;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 65px);
+  margin: 15px 0;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 13px 20px;
+  border: 1px solid #d6b45b;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button.gold {
+  background: #d6b45b;
+  color: #111;
+}
+
+.button:hover {
+  opacity: .8;
+}
+
+.section-title {
+  margin: 25px 0;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.collections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  padding-bottom: 45px;
+}
+
+.collection {
+  background: #151515;
+  border: 1px solid #2b2b2b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.collection img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background: #202020;
+}
+
+.collection-content {
+  padding: 20px;
+}
+
+.collection h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.collection p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+footer {
+  border-top: 1px solid #292929;
+  padding: 30px 0;
+  color: #bbb;
+  line-height: 1.8;
+}
+
+footer strong {
+  color: white;
+}
+
+@media (max-width: 650px) {
+  .collections {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 13px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#accueil">D&J DONA JACQUES<small>STREETWEAR • LUXE • KINSHASA</small></a>
-<nav aria-label="Navigation principale"><a href="#collections">Collections</a><a href="#babouches">Babouches</a><a href="#vetements">Vêtements</a><a href="#engagements">Notre vision</a></nav>
-<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end"><a class="btn" href="index.html">← DigitalStore</a><a class="btn" href="#commander">Commander</a></div>
-</div></header>
-<main id="accueil" class="wrap">
-<section class="hero"><img src="assets/dona-jacques-collection.png" alt="Campagne de la marque DONA JACQUES, collection streetwear D&J"></section>
-<section class="intro">
-<div><div class="eyebrow">Une marque • Une vision • Un style de vie</div><h1>Plus qu’une marque,<br><span class="gold">un style de vie.</span></h1></div>
-<div><p>DONA JACQUES associe élégance, confort et authenticité. Inspirée par Kinshasa et ouverte sur le monde, la marque propose un style affirmé pour celles et ceux qui avancent avec confiance.</p><p>Explorez nos univers : babouches, t-shirts, hoodies et pièces streetwear conçues autour de l’identité D&J.</p><div class="actions"><a class="btn" href="#collections">Découvrir les collections</a><a class="btn" href="#commander">Nous contacter</a></div></div>
-</section>
-<section id="collections" class="section">
-<div class="section-head"><div><div class="eyebrow">L’univers D&J</div><h2>Nos collections</h2></div><p>Choisissez votre style et contactez-nous pour commander.</p></div>
-<div class="grid">
-<article class="collection" id="babouches"><img src="assets/babouches-collection.png" alt="Collection de babouches DONA JACQUES"><div class="collection-info"><div><h3>Babouches D&J</h3><p>Élégance discrète, confort quotidien et détails signature.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
-<article class="collection" id="vetements"><img src="assets/tshirts-collection.png" alt="Collection de t-shirts DONA JACQUES"><div class="collection-info"><div><h3>T-shirts & polos</h3><p>Des pièces essentielles, graphiques et faciles à porter.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
-<article class="collection"><img src="assets/hoodies-collection.png" alt="Collection de hoodies, pulls et ensembles D&J"><div class="collection-info"><div><h3>Hoodies, pulls & ensembles</h3><p>Confort, caractère et influences internationales.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
-<article class="collection"><img src="assets/dona-jacques-collection.png" alt="Univers global de la marque DONA JACQUES"><div class="collection-info"><div><h3>Streetwear & accessoires</h3><p>Construisez un look complet avec l’identité D&J.</p></div><a class="btn" href="#commander">Voir / commander</a></div></article>
-</div>
-</section>
-<section id="engagements" class="section"><div class="eyebrow">La signature D&J</div><h2>Le détail fait la différence.</h2>
-<div class="promise"><div><strong>✦ Style distinctif</strong><span>Une identité visuelle reconnaissable, inspirée par la rue et l’élégance.</span></div><div><strong>◇ Confort au quotidien</strong><span>Des pièces pensées pour être portées et associées facilement.</span></div><div><strong>♧ Finitions soignées</strong><span>Une attention portée aux détails et à la présentation.</span></div><div><strong>◎ Esprit de Kinshasa</strong><span>Une marque congolaise avec une ambition ouverte sur le monde.</span></div></div>
-</section>
-<section id="commander" class="section">
-<div class="section-head"><div><div class="eyebrow">Passez à l’action</div><h2>Votre style commence ici.</h2><p>Pour connaître les stocks, tailles, couleurs et frais de livraison, écrivez-nous.</p></div></div>
-<div class="actions"><a class="btn" href="https://ig.me/m/masterweb75" target="_blank" rel="noopener">Commander sur Instagram</a><a class="btn" href="mailto:contact@digitalstore.cd?subject=Commande%20DONA%20JACQUES">Nous écrire par e-mail</a></div>
-</section>
+
+<header>
+  <div class="container navbar">
+    <a href="#accueil" class="logo">DONA <span>JACQUES</span></a>
+
+    <nav>
+      <a href="#babouches">Babouches</a>
+      <a href="#vetements">Vêtements</a>
+      <a href="#sweats">Sweats</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="accueil">
+
+  <section class="hero">
+    <img
+      src="Collection%20Dona%20Jacques.png"
+      alt="Collection DONA JACQUES"
+    >
+  </section>
+
+  <section class="intro">
+    <div class="subtitle">D&J — Style sans frontières</div>
+
+    <h1>Affirme ton style.<br>
+      <span>Écris ton histoire.</span>
+    </h1>
+
+    <p>
+      DONA JACQUES est une marque de vêtements inspirée par la jeunesse,
+      la confiance, l'amour et l'évolution. Découvre notre univers streetwear
+      et nos collections pensées pour affirmer ton identité.
+    </p>
+
+    <a href="#collections" class="button gold">
+      Découvrir les collections
+    </a>
+  </section>
+
+  <section id="collections">
+
+    <div class="section-title">
+      <h2>Nos collections</h2>
+      <p>
+        Découvre l'univers DONA JACQUES et nos différentes inspirations.
+        Contacte-nous pour connaître les modèles, les tailles et les prix disponibles.
+      </p>
+    </div>
+
+    <div class="collections">
+
+      <article class="collection" id="babouches">
+        <img
+          src="collection-babouches.png"
+          alt="Collection de babouches DONA JACQUES"
+        >
+
+        <div class="collection-content">
+          <h3>Babouches D&J</h3>
+          <p>
+            Un style sobre et élégant, avec une identité discrète
+            pour compléter ton look.
+          </p>
+          <a href="#contact" class="button">Demander des informations</a>
+        </div>
+      </article>
+
+      <article class="collection" id="vetements">
+        <img
+          src="Collection%20Dona%20Jacques.png"
+          alt="Collection de vêtements DONA JACQUES"
+        >
+
+        <div class="collection-content">
+          <h3>T-shirts et vêtements</h3>
+          <p>
+            Des inspirations streetwear pour exprimer ta personnalité
+            et créer ton propre style.
+          </p>
+          <a href="#contact" class="button">Demander des informations</a>
+        </div>
+      </article>
+
+      <article class="collection" id="sweats">
+        <img
+          src="collection-sweats-%C3%A0-capuches.png"
+          alt="Collection de sweats à capuche DONA JACQUES"
+        >
+
+        <div class="collection-content">
+          <h3>Sweats et hoodies</h3>
+          <p>
+            Des modèles confortables et modernes pour un style
+            streetwear au quotidien.
+          </p>
+          <a href="#contact" class="button">Demander des informations</a>
+        </div>
+      </article>
+
+      <article class="collection">
+        <img
+          src="Collection%20Dona%20Jacques.png"
+          alt="Univers de la marque DONA JACQUES"
+        >
+
+        <div class="collection-content">
+          <h3>L'univers D&J</h3>
+          <p>
+            Une marque qui représente la confiance, l'ambition,
+            la jeunesse et l'évolution.
+          </p>
+          <a href="#contact" class="button">Découvrir la marque</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
 </main>
-<footer><div class="wrap foot"><div><span class="gold">D&J DONA JACQUES</span><br>Streetwear • Luxe • Kinshasa</div><div><a href="index.html" style="color:var(--gold);text-decoration:none">Retour à DigitalStore →</a></div><div>Une marque. Une vision. Un style de vie.</div><div>© <span id="year"></span> DONA JACQUES</div></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+
+<footer id="contact">
+  <div class="container">
+    <strong>DONA JACQUES — D&J</strong><br>
+    Pour les commandes, les prix et les disponibilités,
+    contacte directement la marque.<br>
+    Ajoute ton lien Instagram officiel dans cette section avant publication.
+  </div>
+</footer>
+
+</body>
+  </html>
