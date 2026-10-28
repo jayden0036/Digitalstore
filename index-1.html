@@ -235,4 +235,41 @@ const P=[
 ["Bas", "Essentiel", "", "Pantalon Street", "Une pièce polyvalente à associer avec un tee-shirt, un hoodie ou un pull.", "S, M, L, XL", "Noir, beige", 35],
 ["Ensembles", "Ensemble", "complet-pull-pantalon.jpg", "Complet Pull + Pantalon", "Un ensemble coordonné pour un look complet, confortable et cohérent.", "M, L, XL", "Noir, gris", 70],
 ["Chaussures", "Accessoire", "babouches-dj.jpg", "Babouches D&J", "Une option simple et confortable pour compléter une tenue décontractée.", "À confirmer", "Noir, marron", 20],
-["Accessoires", "Accesso
+["Accessoires", "Accesso ["Accessoires", "Accessoire", "casquette-signature.jpg", "Casquette Signature", "Un accessoire minimaliste pour renforcer l’identité de la marque.", "Taille ajustable", "Noir, beige", 20],
+["Accessoires", "Accessoire", "sac-streetwear.jpg", "Sac Streetwear", "Un sac pratique pour les sorties et les essentiels du quotidien.", "À confirmer", "Noir", 30],
+["Bas", "Essentiel", "short-street.jpg", "Short Street", "Une pièce légère pour les journées chaudes et les tenues décontractées.", "S, M, L, XL", "Noir, gris", 25],
+["Hauts", "Smart casual", "polo-dj.jpg", "Polo D&J", "Une alternative plus habillée au tee-shirt, avec une finition épurée.", "M, L, XL", "Noir, blanc", 30],
+["Accessoires", "Accessoire", "chaussettes-dj.jpg", "Chaussettes D&J", "Un détail discret pour compléter une tenue de la tête aux pieds.", "Tailles à confirmer", "Noir, blanc", 10],
+["Chaussures", "Coloris signature", "", "Babouche blanche — bande rouge & verte", "Semelle blanche épaisse et bande tricolore pour une version plus vive.", "M, L, XL", "Blanc, rouge, vert", 28],
+["Chaussures", "Noir sur noir", "", "Babouche noire — logo noir", "Version entièrement noire : semelle noire, bande noire et logo noir ton sur ton.", "M, L, XL", "Noir mat, noir brillant", 28],
+["Chaussures", "Premium", "babouche-luxe-brodee.jpg", "Babouche luxe noire brodée", "Silhouette premium avec détails discrets et finitions ton sur ton.", "M, L, XL", "Noir, détails dorés", 35],
+["Chaussures", "Édition spéciale", "babouche-broderie-artistique.jpg", "Babouche noire broderie artistique", "Une alternative plus habillée avec broderie décorative.", "M, L, XL", "Noir, or", 38],
+["Hauts", "Street utility", "gilet-sans-manches.jpg", "Gilet sans manches D&J", "Gilet matelassé noir avec petits détails dorés pour un style urbain affirmé.", "M, L, XL", "Noir, noir/or", 40],
+["Hauts", "Graphique", "t-shirt-graphique.jpg", "T-shirt graphique D&J", "T-shirt oversize avec graphisme central et signature de marque.", "M, L, XL", "Noir, blanc", 28],
+["Chaussures", "Nouveau", "baskets-street.jpg", "Baskets D&J Street", "Baskets streetwear noires avec accents dorés, pensées pour compléter la tenue.", "M, L, XL", "Noir/or", 75],
+["Chaussures", "Nouveau", "", "Baskets D&J Contrast", "Une version claire avec détails contrastés pour varier les looks.", "M, L, XL", "Blanc, noir, or", 70],
+["Bas", "Techwear", "cargo-tech-noir.jpg", "Cargo Tech noir D&J", "Cargo noir à poches utilitaires et petits détails dorés.", "M, L, XL", "Noir, olive", 38],
+["Accessoires", "Accessoire", "bonnet-cotele.jpg", "Bonnet côtelé D&J", "Bonnet noir avec monogramme discret pour compléter les tenues.", "M, L, XL", "Noir, gris", 18]
+];
+const g=document.getElementById('grid');
+const mail=t=>'mailto:contact@digitalstore.cd?subject='+encodeURIComponent('DONA JACQUES : demande d\'information pour '+t)+'&body='+encodeURIComponent('Bonjour, je souhaite recevoir des informations sur '+t+' (DONA JACQUES). Merci de me confirmer le prix, les tailles, les couleurs disponibles et la disponibilité.');
+const esc=x=>x.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+g.innerHTML=P.map(([c,b,i,t,d,s1,s2,p])=>`<article class="piece" data-category="${c}"><div class="art"><span class="badge">${esc(b)}</span>${i?`<img class="product-photo" src="${i}" alt="${esc(t)}" loading="lazy">`:'<div class="ph" role="img" aria-label="Photo à venir"><b>D&amp;J</b><span>Photo à venir</span></div>'}</div><div class="pb"><h3>${esc(t)}</h3><p>${esc(d)}</p><div class="product-meta"><span>${esc(s1)}</span><span>${esc(s2)}</span></div><div class="foot"><div><span class="price">$${p}</span><span class="soon">Prix indicatif</span><div class="price-note">À confirmer avant commande</div></div><a class="more" href="${mail(t)}">Demander →</a></div></div></article>`).join('');
+</script>
+  <script>
+    (() => {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.piece');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filter = button.dataset.filter;
+          buttons.forEach(item => item.classList.toggle('active', item === button));
+          cards.forEach(card => {
+            card.hidden = filter !== 'Tous' && card.dataset.category !== filter;
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
